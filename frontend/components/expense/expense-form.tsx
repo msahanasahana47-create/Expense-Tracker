@@ -275,7 +275,7 @@ export function ExpenseForm({ expense, onClose, onSubmit }: ExpenseFormProps) {
               disabled={saving}
               className="flex-[2] border-2 border-ink bg-ink px-4 py-3 text-xs font-medium uppercase tracking-[0.15em] text-paper shadow-[3px_3px_0_0_var(--stamp)] transition-all hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stamp focus-visible:ring-offset-2 focus-visible:ring-offset-paper disabled:translate-y-0 disabled:opacity-60"
             >
-              {saving ? 'Saving…' : isEdit ? 'Save changes' : 'Add to ledger'}
+              {saving ? 'Saving…' : isEdit ? 'Save changes' : 'Add Expense'}
             </button>
           </div>
         </form>
