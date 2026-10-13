@@ -1,0 +1,84 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@theme inline {
+  --font-sans: var(--font-plex-mono), ui-monospace, monospace;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+  --font-serif: var(--font-instrument-serif), Georgia, serif;
+
+  --color-paper: var(--paper);
+  --color-paper-deep: var(--paper-deep);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-rule: var(--rule);
+  --color-stamp: var(--stamp);
+  --color-moss: var(--moss);
+
+  --color-background: var(--paper);
+  --color-foreground: var(--ink);
+  --color-primary: var(--ink);
+  --color-primary-foreground: var(--paper);
+  --color-muted: var(--paper-deep);
+  --color-muted-foreground: var(--ink-soft);
+  --color-border: var(--rule);
+  --color-input: var(--rule);
+  --color-ring: var(--stamp);
+  --color-destructive: var(--stamp);
+  --color-card: var(--paper);
+  --color-card-foreground: var(--ink);
+  --color-popover: var(--paper);
+  --color-popover-foreground: var(--ink);
+  --color-secondary: var(--paper-deep);
+  --color-secondary-foreground: var(--ink);
+  --color-accent: var(--paper-deep);
+  --color-accent-foreground: var(--ink);
+
+  --radius-sm: 2px;
+  --radius-md: 3px;
+  --radius-lg: 4px;
+}
+
+:root {
+  color-scheme: light;
+  --paper: #f2ede2;
+  --paper-deep: #e7dfcf;
+  --ink: #1b1915;
+  --ink-soft: #6f675a;
+  --rule: #cfc5b1;
+  --stamp: #c93d1b;
+  --moss: #3f5a3c;
+  --radius: 4px;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-paper text-ink font-mono;
+    background-image: radial-gradient(rgb(27 25 21 / 0.035) 1px, transparent 1px);
+    background-size: 4px 4px;
+  }
+  ::selection {
+    background: var(--stamp);
+    color: var(--paper);
+  }
+  input[type='date']::-webkit-calendar-picker-indicator {
+    opacity: 0.55;
+    cursor: pointer;
+  }
+}
+
+@utility perforation {
+  background-image: radial-gradient(circle, var(--paper) 4px, transparent 4.5px);
+  background-size: 14px 10px;
+  background-repeat: repeat-x;
+}
+
+@utility leader {
+  background-image: radial-gradient(circle, var(--rule) 1px, transparent 1.5px);
+  background-size: 6px 4px;
+  background-repeat: repeat-x;
+  background-position: bottom;
+}
